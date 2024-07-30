@@ -58,21 +58,24 @@
 .seatInfoWrapper {
     display: flex;
     margin-bottom: 32px;
+    gap: 2em;
 }
-.todayWorkSeat {
+
+.seatInfoSection {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 440px;
+    height: 5rem;
     background-color: #f4f7fb;
     border-radius: 8px;
-    height: 5rem;
 }
-.todayWorkSeat h3 {
+.seatInfoSection h3 {
     font-size: 15px;
     color: #4E5968;
 }
 
+/* 오늘의 근무좌석 css */
 .todayWorkSeatInfo {
     display: flex;
     align-items: center;
@@ -88,6 +91,63 @@
     padding: 5px;
 }
 .noTodayWorkSeat {
+    font-size: 15px;
+    color: #B0B8C1;
+}
+
+/* 즐겨찾기 좌석 css */
+.favoriteSeatList {
+    display: flex;
+}
+.favoriteSeatList span {
+    border-radius: 50%;
+    background-color: #d6e5f7;
+    margin-right: 25px;
+    width: 46px;
+    height: 46px;
+}
+.favoriteSeat span em {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    font-size: 13px;
+    line-height: 46px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.favoriteSeatList button {
+    color: #8F969B;
+    font-size: 15px;
+    padding: 5px;
+}
+.noFavoriteSeat {
+    font-size: 15px;
+    color: #B0B8C1;
+}
+
+/* 최근예약 좌석 css */
+.recentlyList {
+    display: flex;
+}
+.recentlyList span {
+    border-radius: 50%;
+    background-color: #d6e5f7;
+    margin-right: 25px;
+    width: 46px;
+    height: 46px;
+}
+.recentlyList span em {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    font-size: 13px;
+    line-height: 46px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.noRecently {
     font-size: 15px;
     color: #B0B8C1;
 }

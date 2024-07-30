@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './layout.module.css';
+import cx from 'classnames';
 import searchIcon from '../../../public/ico_search.png';
 import Sidebar from '@/app/_component/Sidebar';
 import Image from "next/image";
@@ -45,7 +46,7 @@ export default function MainLayout({ children }: Props) {
           {/* 좌석 정보 */}
           <div className={style.seatInfoWrapper}>
             {/* 오늘의 근무 좌석 */}
-            <div className={style.todayWorkSeat}>
+            <div className={style.seatInfoSection}>
               <h3>오늘의 근무 좌석</h3>
               {/* 좌석 예약 정보에 따라 조건 - 예약된 좌석이 있는 경우 */}
               {/*<div className={style.todayWorkSeatInfo}>*/}
@@ -58,8 +59,33 @@ export default function MainLayout({ children }: Props) {
               </div>
             </div>
 
-          {/* 즐겨찾기 */}
-          {/* 최근예약 좌석 */}
+            {/* 즐겨찾기 */}
+            <div className={style.seatInfoSection}>
+              <h3>즐겨찾기 좌석</h3>
+              {/*<div className={style.favoriteSeatList}>*/}
+              {/*  <span><em>실리안</em></span>*/}
+              {/*  <span><em>니나브</em></span>*/}
+              {/*  <span><em>웨이</em></span>*/}
+              {/*  <button>편집</button>*/}
+              {/*</div>*/}
+              <div className={style.noFavoriteSeat}>
+                <span>좌석을 선택하여 즐겨찾기를 해주세요.</span>
+              </div>
+            </div>
+
+            {/* 최근예약 좌석 */}
+            <div className={style.seatInfoSection}>
+              <h3>최근예약 좌석</h3>
+              {/*<div className={style.recentlyList}>*/}
+              {/*  <span><em>카단</em></span>*/}
+              {/*  <span><em>아브렐슈드</em></span>*/}
+              {/*  <span><em>일리아칸</em></span>*/}
+              {/*</div>*/}
+              <div className={style.noRecently}>
+                <span>최근 예약한 좌석이 없습니다.</span>
+              </div>
+            </div>
+
           </div>
 
           {children}
