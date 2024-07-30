@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    align-items: stretch;
+    background-color: #ffffff;
+}
+
+.sidebarWrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contentWrapper section {
+    width: 100dvw;
+}
+
+.headerTitle {
+    padding-top: 80px;
+    padding-bottom: 43px;
+}
+.headerTitle h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #191F28;
+    display: inline-block;
+    line-height: 33px;
+    height: 33px;
+    vertical-align: middle;
+}
+.headerTitle span {
+    font-size: 15px;
+    color: #8F969B;
+    display: inline-block;
+    padding-left: 50px;
+    line-height: 33px;
+    height: 33px;
+    vertical-align: middle;
+}
+
+.search {
+    position: absolute;
+    top: 78px;
+    right: 0;
+}
+.searchBtn {
+    width: 40px;
+    height: 40px;
+}
+.searchIcon {
+    display: flex;
+    align-items: center;
+}
+
+.seatInfoWrapper {
+    display: flex;
+    margin-bottom: 32px;
+}
+.todayWorkSeat {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 440px;
+    background-color: #f4f7fb;
+    border-radius: 8px;
+    height: 5rem;
+}
+.todayWorkSeat h3 {
+    font-size: 15px;
+    color: #4E5968;
+}
+
+.todayWorkSeatInfo {
+    display: flex;
+    align-items: center;
+}
+.todayWorkSeatInfo span {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+.todayWorkSeatInfo button {
+    color: #8F969B;
+    font-size: 15px;
+    padding: 5px;
+}
+.noTodayWorkSeat {
+    font-size: 15px;
+    color: #B0B8C1;
+}
