@@ -1,0 +1,33 @@
+.todayReservedSeatWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 440px;
+    height: 5rem;
+    background-color: #f4f7fb;
+    border-radius: 8px;
+}
+.todayReservedSeatWrapper h3 {
+    font-size: 15px;
+    color: #4E5968;
+}
+
+/* 오늘의 근무좌석 css */
+.todayReservedSeatInfo {
+    display: flex;
+    align-items: center;
+}
+.todayReservedSeatInfo span {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+.todayReservedSeatInfo button {
+    color: #8F969B;
+    font-size: 15px;
+    padding: 5px;
+}
+.noTodayReservedSeat {
+    font-size: 15px;
+    color: #B0B8C1;
+}

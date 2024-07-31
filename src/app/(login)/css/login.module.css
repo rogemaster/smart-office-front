@@ -9,14 +9,12 @@
 }
 
 .signMessage {
-    max-width: 24rem;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
 
 .signMessage h2 {
-    margin-top: 2.5rem;
     line-height: 2.25rem;
     text-align: center;
 }

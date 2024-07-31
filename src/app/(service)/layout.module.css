@@ -9,145 +9,14 @@
     align-items: flex-end;
 }
 
-.contentWrapper {
+.seatWrapper {
     display: flex;
     align-items: flex-start;
-}
-
-.contentWrapper section {
-    width: 100dvw;
-}
-
-.headerTitle {
-    padding-top: 80px;
-    padding-bottom: 43px;
-}
-.headerTitle h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #191F28;
-    display: inline-block;
-    line-height: 33px;
-    height: 33px;
-    vertical-align: middle;
-}
-.headerTitle span {
-    font-size: 15px;
-    color: #8F969B;
-    display: inline-block;
-    padding-left: 50px;
-    line-height: 33px;
-    height: 33px;
-    vertical-align: middle;
-}
-
-.search {
-    position: absolute;
-    top: 78px;
-    right: 0;
-}
-.searchBtn {
-    width: 40px;
-    height: 40px;
-}
-.searchIcon {
-    display: flex;
-    align-items: center;
+    margin: 0 auto;
 }
 
 .seatInfoWrapper {
     display: flex;
     margin-bottom: 32px;
     gap: 2em;
-}
-
-.seatInfoSection {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 440px;
-    height: 5rem;
-    background-color: #f4f7fb;
-    border-radius: 8px;
-}
-.seatInfoSection h3 {
-    font-size: 15px;
-    color: #4E5968;
-}
-
-/* 오늘의 근무좌석 css */
-.todayWorkSeatInfo {
-    display: flex;
-    align-items: center;
-}
-.todayWorkSeatInfo span {
-    font-size: 20px;
-    font-weight: bold;
-    padding-right: 1rem;
-}
-.todayWorkSeatInfo button {
-    color: #8F969B;
-    font-size: 15px;
-    padding: 5px;
-}
-.noTodayWorkSeat {
-    font-size: 15px;
-    color: #B0B8C1;
-}
-
-/* 즐겨찾기 좌석 css */
-.favoriteSeatList {
-    display: flex;
-}
-.favoriteSeatList span {
-    border-radius: 50%;
-    background-color: #d6e5f7;
-    margin-right: 25px;
-    width: 46px;
-    height: 46px;
-}
-.favoriteSeat span em {
-    display: flex;
-    justify-content: center;
-    width: inherit;
-    height: inherit;
-    font-size: 13px;
-    line-height: 46px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.favoriteSeatList button {
-    color: #8F969B;
-    font-size: 15px;
-    padding: 5px;
-}
-.noFavoriteSeat {
-    font-size: 15px;
-    color: #B0B8C1;
-}
-
-/* 최근예약 좌석 css */
-.recentlyList {
-    display: flex;
-}
-.recentlyList span {
-    border-radius: 50%;
-    background-color: #d6e5f7;
-    margin-right: 25px;
-    width: 46px;
-    height: 46px;
-}
-.recentlyList span em {
-    display: flex;
-    justify-content: center;
-    width: inherit;
-    height: inherit;
-    font-size: 13px;
-    line-height: 46px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.noRecently {
-    font-size: 15px;
-    color: #B0B8C1;
 }

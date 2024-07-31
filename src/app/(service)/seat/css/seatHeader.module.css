@@ -1,0 +1,29 @@
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 43px;
+}
+.headerWrapper h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #191F28;
+    display: inline-block;
+    line-height: 33px;
+    height: 33px;
+    vertical-align: middle;
+}
+.headerWrapper span {
+    font-size: 15px;
+    color: #8F969B;
+    display: inline-block;
+    padding-left: 50px;
+    line-height: 33px;
+    height: 33px;
+    vertical-align: middle;
+}
+.searchBtn {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,37 @@
+.recentlyReservedSeatWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 440px;
+    height: 5rem;
+    background-color: #f4f7fb;
+    border-radius: 8px;
+}
+.recentlyReservedSeatWrapper h3 {
+    font-size: 15px;
+    color: #4E5968;
+}
+.recentlyReservedList {
+    display: flex;
+}
+.recentlyReservedList span {
+    border-radius: 50%;
+    background-color: #d6e5f7;
+    margin-right: 25px;
+    width: 46px;
+    height: 46px;
+}
+.recentlyReservedList span em {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    font-size: 13px;
+    line-height: 46px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.noRecentlyReserved {
+    font-size: 15px;
+    color: #B0B8C1;
+}
