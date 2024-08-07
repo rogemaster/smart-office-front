@@ -4,7 +4,7 @@ import SeatHeader from '@/app/(service)/seat/_component/SeatHeader';
 import TodayReservedSeat from '@/app/(service)/seat/_component/TodayReservedSeat';
 import FavoriteSeat from '@/app/(service)/seat/_component/FavoriteSeat';
 import RecentlyReservedSeat from '@/app/(service)/seat/_component/RecentlyReservedSeat';
-import SeatMap from "@/app/(service)/seat/_component/SeatMap";
+import SeatMapHeader from "@/app/(service)/seat/_component/SeatMapHeader";
 
 export default function AutonomousSeatPage() {
   return (
@@ -19,7 +19,7 @@ export default function AutonomousSeatPage() {
         <RecentlyReservedSeat />
         {/* 좌석 평면도 */}
       </div>
-      <SeatMap />
+      <SeatMapHeader />
     </>
   );
 }

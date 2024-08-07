@@ -1,15 +1,27 @@
-"use client"
+'use client';
 
-import {useState} from "react";
+import React, {ChangeEvent, useState} from 'react';
+import dynamic from 'next/dynamic';
 import style from '../css/seatMap.module.css';
 import cx from 'classnames';
+import { FloorInfo } from '@/mocks/data/floorInfo';
 
-export default function SeatMap() {
-  const [floor, setFloor] = useState<string>('6층')
+const DynamicMap = dynamic(() => import('./DynamicSeatMap'), {
+  ssr: false,
+});
+
+export default function SeatMapHeader() {
+  const [floor, setFloor] = useState<string>('6층');
   const [isToggle, setIsToggle] = useState<boolean>(false);
 
   const onToggle = () => {
     setIsToggle(!isToggle);
+  };
+
+  const onSelectFloor = (e: React.MouseEvent) => {
+    const { id } = e.target as HTMLLIElement;
+    setFloor(id);
+    setIsToggle(false);
   };
 
   return (
@@ -17,14 +29,16 @@ export default function SeatMap() {
       {/* 층 선택 */}
       <div className={style.mapInfo}>
         <div className={style.dropdownFloor}>
-          <button className={style.dropdownToggle} onClick={onToggle}>{floor}</button>
+          <button className={style.dropdownToggle} onClick={onToggle}>
+            {floor}
+          </button>
           <div className={cx(isToggle ? style.dropdownMenu : style.noDropdownMenu)}>
             <ul>
-              <li>2층</li>
-              <li>3층</li>
-              <li>4층</li>
-              <li>5층</li>
-              <li>6층</li>
+              {FloorInfo().map((floor) => (
+                <li key={floor.floorId} onClick={onSelectFloor} id={floor.floorName}>
+                  {floor.floorName}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -35,7 +49,9 @@ export default function SeatMap() {
           <span className={style.my}>내좌석</span>
         </div>
       </div>
-      <div className={style.mapContainer} />
+      <div className={style.mapContainer}>
+        <DynamicMap />
+      </div>
     </div>
-  )
+  );
 }

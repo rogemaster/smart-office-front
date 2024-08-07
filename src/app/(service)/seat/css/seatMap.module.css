@@ -11,8 +11,6 @@
 .dropdownFloor {
     position: relative;
     margin-bottom: 20px;
-    /*display: inline-block;*/
-    /*height: 30px;*/
 }
 .dropdownToggle {
     width: 5rem;
@@ -22,6 +20,7 @@
     color: #333D4B;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
 .dropdownMenu {
     position: absolute;
@@ -54,7 +53,10 @@
     color: #3C86FF;
 }
 
-/* 표기 가이드 */
+.noDropdownMenu {
+    display: none;
+}
+
 .mapGuide {
     display: flex;
     flex-direction: row;
@@ -62,7 +64,6 @@
     margin-bottom: 20px;
 }
 .mapGuide span {
-    /*display: inline-block;*/
     color: #6B7684;
     font-size: 13px;
     /*position: relative;*/
@@ -98,7 +99,7 @@
 }
 
 .mapContainer {
-    height: 650px;
+    height: 700px;
     width: 100%;
     background-color: #f4f7fb;
     box-sizing: border-box;
