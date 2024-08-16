@@ -1,6 +1,6 @@
 'use client';
 
-import React, {ChangeEvent, useState} from 'react';
+import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import style from '../css/seatMap.module.css';
 import cx from 'classnames';

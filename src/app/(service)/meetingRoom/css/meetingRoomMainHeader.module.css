@@ -1,0 +1,77 @@
+/* 타이틀 영역 */
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 86rem;
+    padding-top: 80px;
+    padding-bottom: 43px;
+}
+.headerWrapper h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #191F28;
+    display: inline-block;
+    line-height: 33px;
+    height: 33px;
+    vertical-align: middle;
+}
+.headerWrapper span {
+    font-size: 15px;
+    color: #8F969B;
+    display: inline-block;
+    padding-left: 50px;
+    line-height: 33px;
+    height: 33px;
+    vertical-align: middle;
+}
+
+/* 정렬, 날짜 선택 영역 */
+.dropdownFloor {
+    position: relative;
+    margin-bottom: 20px;
+}
+.dropdownToggle {
+    width: 5rem;
+    height: 3rem;
+    background: none;
+    border-radius: 0.3rem;
+    color: #333D4B;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.dropdownMenu {
+    position: absolute;
+    z-index: 1;
+    top: 3.5rem;
+    left: -3px;
+    border: 1px solid #474c53;
+    background-color: #fff;
+    width: 85px;
+    box-sizing: border-box;
+    border-radius: 14px;
+    padding: 10px 0;
+}
+.dropdownMenu ul {
+    max-height: 480px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.dropdownMenu ul li {
+    height: 46px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 46px;
+    cursor: pointer;
+}
+.dropdownMenu ul li:hover {
+    background-color: #f2f3f6;
+}
+.dropdownMenu ul li .is-selected {
+    color: #3C86FF;
+}
+
+.noDropdownMenu {
+    display: none;
+}

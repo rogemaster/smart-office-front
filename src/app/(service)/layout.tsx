@@ -10,7 +10,7 @@ export default function MainLayout({ children }: Props) {
       <div className={style.sidebarWrapper}>
         <Sidebar />
       </div>
-      <div className={style.seatWrapper}>
+      <div className={style.mainWrapper}>
         <section>
           {children}
         </section>

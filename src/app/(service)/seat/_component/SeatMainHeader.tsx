@@ -1,9 +1,9 @@
 import React from 'react';
-import style from '../css/seatHeader.module.css';
+import style from '../css/seatMainHeader.module.css';
 import Image from 'next/image';
 import searchIcon from '../../../../../public/icon_search.png';
 
-export default function SeatHeader() {
+export default function SeatMainHeader() {
   return (
     <header className={style.headerWrapper}>
       <div>
