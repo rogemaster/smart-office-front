@@ -1,10 +1,12 @@
-"use client"
+'use client';
 
-import style from './css/meetingRoomMainHeader.module.css'
-import { FloorButton } from '@/app/_component/FloorButton';
-import cx from "classnames";
-import {FloorInfo} from "@/mocks/data/floorInfo";
-import React, {useState} from "react";
+import style from './css/meetingRoomMainHeader.module.css';
+import cx from 'classnames';
+import { FloorInfo } from '@/mocks/data/floorInfo';
+import React, { useState } from 'react';
+import 'react-calendar/dist/Calendar.css';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export default function MeetingRoomPage() {
   const [floor, setFloor] = useState<string>('6층');
@@ -20,7 +22,6 @@ export default function MeetingRoomPage() {
     setIsToggle(false);
   };
 
-
   return (
     <>
       {/* 타이틀영역 */}
@@ -30,22 +31,26 @@ export default function MeetingRoomPage() {
       </header>
 
       {/* 정렬, 날짜선택 영역 */}
-      <div>
-        <div>
-          <div className={style.dropdownFloor}>
-            <button className={style.dropdownToggle} onClick={onToggle}>
-              {floor}
-            </button>
-            <div className={cx(isToggle ? style.dropdownMenu : style.noDropdownMenu)}>
-              <ul>
-                {FloorInfo().map((floor) => (
-                  <li key={floor.floorId} onClick={onSelectFloor} id={floor.floorName}>
-                    {floor.floorName}
-                  </li>
-                ))}
-              </ul>
-            </div>
+      <div className={style.sortBox}>
+        <div className={style.dropdownFloor}>
+          <button className={style.dropdownToggle} onClick={onToggle}>
+            {floor}
+          </button>
+          <div className={cx(isToggle ? style.dropdownMenu : style.noDropdownMenu)}>
+            <ul>
+              {FloorInfo().map((floor) => (
+                <li key={floor.floorId} onClick={onSelectFloor} id={floor.floorName}>
+                  {floor.floorName}
+                </li>
+              ))}
+            </ul>
           </div>
+        </div>
+        <div className={style.dateBox}>
+          <span>기간</span>
+          <DatePicker showIcon selected={new Date()} customInput={<input className={style.customDateInput} />} />
+          ~
+          <DatePicker selected={new Date()} customInput={<input className={style.customDateInput} />} />
         </div>
       </div>
     </>
